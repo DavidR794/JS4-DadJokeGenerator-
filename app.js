@@ -18,14 +18,17 @@ function removeActive() {
 
 //EVENT LISTENERS.......................................................
 //access the ratings x3buttons...........
+//attaches a "click" event listener to each rating element using a forEach loop.
 ratingsEls.forEach(function (ratingE1) {
   ratingE1.addEventListener("click", function (e) {
     removeActive(); //function to remove the "active" class from all the elements(ratings).
-    selectedRating = e.target.innerText || e.target.parentNode.innerText;
-    e.target.classList.add("active"); //Add the "active" class to the clicked element using
-    e.target.parentNode.classList.add("active"); //Add the "active" class to the parent element of the clicked element using  background stays green once emoji clicked
+    selectedRating = e.target.innerText || e.target.parentNode.innerText; //accesses the element wheteher element or container
+    e.target.classList.add("active"); //Add the "active" class, visually indicates that the rating is selected or highlighted.
+    e.target.parentNode.classList.add("active"); //Add the "active" class to the parent element ensures that the background color of parent element (container) remains active along with the clicked rating.
   });
 });
+//innertext= targeting the element itself the child the one rating clickend
+//parentNode = targets the immediate container or wrapper element that holds the target element.
 
 /*clicking button to show innertext and using dynamic innerHTML
  use of template literals to show selectedRating is equal to whatever rating is clicked.
@@ -36,8 +39,8 @@ btnEl.addEventListener("click", function (e) {
         <strong class= "greeting1" > Thanks for taking part in the review </strong>
         <br>
         <br>
-        <strong> Feedback: ${selectedRating} </strong>
-        <p> We'll use your feedback to support our YOU :)</p>
+        <strong> Feedback: ${selectedRating} </strong> 
+        <p> We'll use your feedback to support our work, thanks :)</p>
         `;
   }
 });
@@ -46,7 +49,7 @@ btnEl.addEventListener("click", function (e) {
 
 // Export statements (if applicable)..........................................
 
-/*parents is the divbox around the emoji:
+/*parents is the container:
     selectedRating = e.target.innerText || e.target.parentNode.innerText;
     e.targer.innertext = checks to see if in element/rating has text content inside it.
     OR
