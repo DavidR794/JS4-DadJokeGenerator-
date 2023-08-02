@@ -21,12 +21,20 @@ function removeActive() {
 //attaches a "click" event listener to each rating element using a forEach loop.
 ratingsEls.forEach(function (ratingE1) {
   ratingE1.addEventListener("click", function (e) {
-    removeActive(); //function to remove the "active" class from all the elements(ratings).
-    selectedRating = e.target.innerText || e.target.parentNode.innerText; //accesses the element wheteher element or container
-    e.target.classList.add("active"); //Add the "active" class, visually indicates that the rating is selected or highlighted.
-    e.target.parentNode.classList.add("active"); //Add the "active" class to the parent element ensures that the background color of parent element (container) remains active along with the clicked rating.
+    removeActive();
+    selectedRating = e.target.innerText || e.target.parentNode.innerText;
+    e.target.classList.add("active");
+    e.target.parentNode.classList.add("active");
   });
 });
+//WHAT THE CODE ABOVE DOES:
+//removeActive() //function to remove the "active" class from all the elements(ratings).
+//selectedRating //accesses the element whether element or(||) container
+//etargetclassList //Add the "active" class, visually indicates that the rating is selected or highlighted.
+//etargetparentNode:
+/*Add the "active" class to the parent element ensures that the background color 
+of parent element (container) remains active along with the clicked rating.*/
+
 //innertext= targeting the element itself the child the one rating clickend
 //parentNode = targets the immediate container or wrapper element that holds the target element.
 
@@ -44,6 +52,10 @@ btnEl.addEventListener("click", function (e) {
         `;
   }
 });
+/*code above adds click event to "send review" button
+1st. rating(emoji) is selected then send review buton is clicked 
+This then shows the other side of the container we add an "inner.html" with a 
+ greeting message.*/
 
 // Main Logic or additional code ..........................................
 
