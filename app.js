@@ -1,5 +1,3 @@
-//IMPORT statements if any
-
 //VARIABLE DECLARATIONS...........................................
 const sendReviewBtnEl = document.getElementById("btn"); //target button from index.HTML
 const ratingsEls = document.querySelectorAll(".rating"); //Access all the classes with name of rating

@@ -8,7 +8,7 @@ body {
   font-family: monospace;
 }
 
-.container {
+.containerFD {
   width: 500px;
   padding: 20px;
   border-radius: 10px;
@@ -16,14 +16,14 @@ body {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 }
 
-.heading {
+.headingFD {
   color: rgb(13, 186, 85);
   margin: 5px;
   font-size: 35px;
   margin-bottom: 20px;
 }
 
-.ratings-container {
+.ratings-containerFD {
   display: flex;
   padding: 20px 0;
 }
@@ -51,7 +51,7 @@ body {
   font-size: 30px;
 }
 
-.btn {
+.btnFD {
   background-color: rgb(189, 33, 213);
   color: rgb(252, 245, 245);
   padding: 5px 10px;
